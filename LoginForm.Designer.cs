@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿namespace CyberBites
+=======
+﻿namespace Krypton_Test
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
 {
     partial class LoginForm
     {
@@ -414,12 +418,19 @@
             ClientSize = new Size(1209, 553);
             Controls.Add(pnlSignUp);
             Controls.Add(pnlLogin);
+<<<<<<< HEAD
             Icon = (Icon)resources.GetObject("$this.Icon");
+=======
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
             Margin = new Padding(3, 2, 3, 2);
             Name = "LoginForm";
             StateCommon.Back.Color1 = Color.FromArgb(30, 30, 38);
             StateCommon.Back.Color2 = Color.FromArgb(30, 30, 38);
+<<<<<<< HEAD
             Text = "CyberBites";
+=======
+            Text = "LoginForm";
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
             Load += LoginForm_Load;
             ((System.ComponentModel.ISupportInitialize)pnlLogin).EndInit();
             pnlLogin.ResumeLayout(false);

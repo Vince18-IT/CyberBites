@@ -1,28 +1,42 @@
 ﻿using System;
 using System.Windows.Forms;
 using Krypton.Toolkit;
+<<<<<<< HEAD
 using System.Data.SQLite; // Added for the Wallet Database Saving!
 
 namespace CyberBites
+=======
+
+namespace Krypton_Test
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
 {
     public partial class MainForm : KryptonForm
     {
         private HomePage myHomePage;
         private CartPage myCartPage;
         private TopupPage myTopupPage;
+<<<<<<< HEAD
         private AccountPage myAccountPage;
         private string globalUsername;
         private string globalSeat;
+=======
+        private AccountPage myAccountPage; // Added Topup instance
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
 
         // The "Bank" - This holds the money for the whole app
         private decimal walletBalance = 0.00m;
 
+<<<<<<< HEAD
         // 1. Updated Constructor to accept startingBalance
         public MainForm(string loggedInFullName, string loggedInEmail, string loggedInUsername, string currentSeat, decimal startingBalance)
+=======
+        public MainForm(string loggedInFullName, string loggedInEmail, string loggedInUsername)
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
         {
             InitializeComponent();
             MakeCircular(imgTopAvatar);
 
+<<<<<<< HEAD
             globalUsername = loggedInUsername;
             globalSeat = currentSeat;
 
@@ -32,10 +46,15 @@ namespace CyberBites
             lblTopName.Text = loggedInFullName;
 
             // Initialize all pages once
+=======
+            lblTopName.Text = loggedInFullName;
+            // 1. Initialize all pages once
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
             myHomePage = new HomePage();
             myCartPage = new CartPage();
             myTopupPage = new TopupPage();
             myAccountPage = new AccountPage();
+<<<<<<< HEAD
 
             // 3. Immediately update the UI so they see their money right when they log in
             myHomePage.UpdateBalanceDisplay(walletBalance);
@@ -43,12 +62,16 @@ namespace CyberBites
             myCartPage.UpdateBalanceDisplay(walletBalance);
             myTopupPage.UpdateAccountNameDisplay(loggedInFullName);
             // The Cart Matchmaker (Home -> Cart)
+=======
+            // 2. The Cart Matchmaker (Home -> Cart)
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
             myHomePage.OnAddToCartClicked += (name, price, img) =>
             {
                 myCartPage.AddItemToCart(name, price, img);
                 MessageBox.Show($"{name} was added to your cart!", "Success");
             };
 
+<<<<<<< HEAD
             myAccountPage.OnProfileNameChanged += (newName) =>
             {
                 lblTopName.Text = newName;
@@ -72,20 +95,42 @@ namespace CyberBites
             };
 
             // --- THE NEW DATABASE CHECKOUT MATCHMAKER ---
+=======
+            // 3. The Top-up Matchmaker (Topup -> Bank -> All Pages)
+            myTopupPage.OnTopUpConfirmed += (foodAmount, pcAmount) =>
+            {
+                // Update the global bank account with the food credit
+                walletBalance += foodAmount;
+
+                // Tell the pages to update their labels
+                myHomePage.UpdateBalanceDisplay(walletBalance);
+                myTopupPage.UpdateDisplayBalance(walletBalance);
+
+                // Optional: You could also track pcAmount separately if you have a timer!
+            };
+
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
             myCartPage.OnCheckoutRequested += (totalToPay) =>
             {
                 if (walletBalance >= totalToPay)
                 {
+<<<<<<< HEAD
                     // Deduct local memory
                     walletBalance -= totalToPay;
 
                     // Save to Database
                     UpdateDatabaseWallet(walletBalance);
+=======
+                    walletBalance -= totalToPay; // Deduct the money
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
 
                     // Update all balance labels across the app
                     myHomePage.UpdateBalanceDisplay(walletBalance);
                     myTopupPage.UpdateDisplayBalance(walletBalance);
+<<<<<<< HEAD
                     myCartPage.UpdateBalanceDisplay(walletBalance);
+=======
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
 
                     return true; // Payment approved
                 }
@@ -104,6 +149,7 @@ namespace CyberBites
                 lblTopName.Text = newName;
             };
 
+<<<<<<< HEAD
             myAccountPage.LoadUserData(loggedInFullName, loggedInEmail, loggedInUsername, currentSeat);
 
             // Start the app on the Home Page
@@ -149,6 +195,21 @@ namespace CyberBites
                     MessageBox.Show("Failed to save balance to database: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+=======
+            myAccountPage.LoadUserData(loggedInFullName, loggedInEmail, loggedInUsername, FakeDatabase.SeatNumber);
+
+            // 4. Start the app on the Home Page
+            LoadPage(myHomePage);
+
+            while (string.IsNullOrEmpty(FakeDatabase.SeatNumber))
+            {
+                SeatNumberModal seatModal = new SeatNumberModal();
+                seatModal.ShowDialog();
+            }
+
+            // Once they finally provide one, update the UI
+            myAccountPage.UpdateSeatDisplay(FakeDatabase.SeatNumber);
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
         }
 
         private void MakeCircular(PictureBox picBox)

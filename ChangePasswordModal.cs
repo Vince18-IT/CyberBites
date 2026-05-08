@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using Krypton.Toolkit;
 using System;
 using System.Data.SQLite;
@@ -18,10 +19,30 @@ namespace CyberBites
 
             // UI Polish: Start the blinking cursor in the Current Password box immediately
             this.ActiveControl = txtCurrentPassword;
+=======
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using Krypton.Toolkit;
+
+
+namespace Krypton_Test
+{
+    public partial class ChangePasswordModal : KryptonForm
+    {
+        public ChangePasswordModal()
+        {
+            InitializeComponent();
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
         }
 
         private void btnChangepass_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             string currentPass = txtCurrentPassword.Text;
             string newPass = txtNewPassword.Text;
             string confirmPass = txtConfirmPassword.Text;
@@ -76,6 +97,10 @@ namespace CyberBites
                 }
             }
         }   
+=======
+
+        }
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
@@ -84,6 +109,7 @@ namespace CyberBites
 
         private void kryptonCheckBox1_CheckedChanged(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             // Toggle masking for all three boxes
             char maskChar = kryptonCheckBox1.Checked ? '\0' : '•';
 
@@ -93,3 +119,22 @@ namespace CyberBites
         }
     }
 }
+=======
+            if (kryptonCheckBox1.Checked)
+            {
+                // '\0' is a special character that means "No Mask" (Show real text)
+                txtCurrentPassword.PasswordChar = '\0';
+                txtNewPassword.PasswordChar = '\0';
+                txtConfirmPassword.PasswordChar = '\0';
+            }
+            else
+            {
+                // Put the mask back on! (You can use '*' or '•')
+                txtCurrentPassword.PasswordChar = '•';
+                txtNewPassword.PasswordChar = '•';
+                txtConfirmPassword.PasswordChar = '•';
+            }
+        }
+    }
+}
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a

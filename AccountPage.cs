@@ -5,16 +5,25 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+<<<<<<< HEAD
 using System.Data.SQLite;
 using System.IO;
 
 namespace CyberBites
+=======
+
+
+namespace Krypton_Test
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
 {
     public partial class AccountPage : UserControl
     {
         public Action<Image> OnProfilePicChanged;
         public Action<string> OnProfileNameChanged;
+<<<<<<< HEAD
 
+=======
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
         public AccountPage()
         {
             InitializeComponent();
@@ -23,7 +32,13 @@ namespace CyberBites
 
         private void kryptonLinkLabel1_LinkClicked(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             ChangePasswordModal pwdModal = new ChangePasswordModal(txtUsername.Text);
+=======
+            ChangePasswordModal pwdModal = new ChangePasswordModal();
+
+
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
             pwdModal.ShowDialog();
         }
 
@@ -32,6 +47,7 @@ namespace CyberBites
             // Update the big display label
             lblNameUser.Text = $"{fullName}\n({username})";
 
+<<<<<<< HEAD
             // Pre-fill all text boxes
             txtName.Text = fullName;
             txtEmail.Text = email;
@@ -103,6 +119,13 @@ namespace CyberBites
             {
                 return Image.FromStream(ms);
             }
+=======
+            // Pre-fill all three text boxes!
+            txtName.Text = fullName;
+            txtEmail.Text = email;         // <-- New addition
+            txtUsername.Text = username;
+            txtSeatno.Text = seatNum;
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
         }
 
         private void MakeCircular(PictureBox picBox)
@@ -116,6 +139,7 @@ namespace CyberBites
 
         private void btnUploadPhoto_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             // 1. Open the Windows File Explorer so they can pick a picture
             using (OpenFileDialog ofd = new OpenFileDialog())
             {
@@ -161,12 +185,41 @@ namespace CyberBites
                     {
                         MessageBox.Show("Error saving picture: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+=======
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            // Tell it to only look for image files
+            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
+            openFileDialog.Title = "Select a Profile Picture";
+
+            // If they pick an image and click OK...
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    // SAFE WAY: Read the file as a stream so Windows doesn't lock it or crash
+                    using (System.IO.FileStream stream = new System.IO.FileStream(openFileDialog.FileName, System.IO.FileMode.Open, System.IO.FileAccess.Read))
+                    {
+                        imgAvatar.Image = Image.FromStream(stream);
+                    }
+
+                    // Make sure it fits perfectly inside the box
+                    imgAvatar.SizeMode = PictureBoxSizeMode.Zoom;
+
+                    // THE MEGAPHONE: Tell the MainForm to update its mini-avatar too!
+                    OnProfilePicChanged?.Invoke(imgAvatar.Image);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Could not load that image. Please try a different photo.\n\nError: " + ex.Message, "Invalid Image", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
                 }
             }
         }
 
         private void btnSaveChanges_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             // 1. Grab the new name from the textbox
             string fullName = txtName.Text.Trim();
             string username = txtUsername.Text.Trim(); // We need this to find the correct row in the DB
@@ -206,6 +259,21 @@ namespace CyberBites
             lblNameUser.Text = $"{fullName}\n({username})";
 
             // Shout the new name to the MainForm so it can update the top-right welcome message!
+=======
+            string fullName = txtName.Text.Trim();
+            string username = txtUsername.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(fullName) || string.IsNullOrWhiteSpace(username))
+            {
+                MessageBox.Show("Please enter both a Name and a Username.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // This updates the local page
+            lblNameUser.Text = $"{fullName}\n({username})";
+
+            // --- ADD THIS LINE: Shout the new name to the MainForm! ---
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
             OnProfileNameChanged?.Invoke(fullName);
 
             MessageBox.Show("Profile updated successfully!", "CyberBites Account", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -225,6 +293,10 @@ namespace CyberBites
                 // 1. Create the new Login screen
                 LoginForm login = new LoginForm();
 
+<<<<<<< HEAD
+=======
+                // --- ADD THIS MAGIC LINE ---
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
                 // This tells the new login screen to assassinate any hidden ghost processes if it gets closed!
                 login.FormClosed += (s, args) => Application.Exit();
 
@@ -242,6 +314,7 @@ namespace CyberBites
 
         private void txtSeatno_DoubleClick(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             // Grab the username and current seat straight from the textboxes on the screen!
             SeatNumberModal seatModal = new SeatNumberModal(txtUsername.Text, txtSeatno.Text);
 
@@ -258,3 +331,15 @@ namespace CyberBites
         }
     }
 }
+=======
+            SeatNumberModal seatModal = new SeatNumberModal();
+
+            if (seatModal.ShowDialog() == DialogResult.OK)
+            {
+                // If they successfully saved a new seat, update the textbox to show it!
+                txtSeatno.Text = FakeDatabase.SeatNumber;
+            }
+        }
+    }
+}
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a

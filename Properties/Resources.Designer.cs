@@ -8,7 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+<<<<<<< HEAD
 namespace CyberBites.Properties {
+=======
+namespace Krypton_Test.Properties {
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
     using System;
     
     
@@ -39,7 +43,11 @@ namespace CyberBites.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
+<<<<<<< HEAD
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("CyberBites.Properties.Resources", typeof(Resources).Assembly);
+=======
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Krypton_Test.Properties.Resources", typeof(Resources).Assembly);
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
                     resourceMan = temp;
                 }
                 return resourceMan;

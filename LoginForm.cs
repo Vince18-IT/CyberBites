@@ -7,9 +7,14 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Xml.Linq;
+<<<<<<< HEAD
 using System.Data.SQLite;
 
 namespace CyberBites
+=======
+
+namespace Krypton_Test
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
 {
     public partial class LoginForm : KryptonForm
     {
@@ -23,6 +28,7 @@ namespace CyberBites
             string inputUser = txtLoginUser.Text.Trim();
             string inputPass = txtLoginPass.Text;
 
+<<<<<<< HEAD
             if (string.IsNullOrWhiteSpace(inputUser) || string.IsNullOrWhiteSpace(inputPass))
             {
                 MessageBox.Show("Please enter both Username and Password.", "Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -79,6 +85,13 @@ namespace CyberBites
             {
                 // Passed all FIVE pieces of data, including dbWallet
                 MainForm appMain = new MainForm(dbFullName, dbEmail, dbUsername, dbSeat, dbWallet);
+=======
+            // Check if the input matches what is saved in our Fake Database
+            if (inputUser == FakeDatabase.Username && inputPass == FakeDatabase.Password)
+            {
+                // IT MATCHES! Create the MainForm and hand over the saved data like a baton.
+                MainForm appMain = new MainForm(FakeDatabase.FullName, FakeDatabase.Email, FakeDatabase.Username);
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
                 appMain.FormClosed += (s, args) => Application.Exit();
                 appMain.Show();
                 this.Hide();
@@ -86,6 +99,10 @@ namespace CyberBites
             else
             {
                 MessageBox.Show("Invalid Username or Password. Please try again or create an account.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error);
+<<<<<<< HEAD
+=======
+                txtLoginUser.Clear();
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
                 txtLoginPass.Clear();
             }
         }
@@ -116,6 +133,7 @@ namespace CyberBites
 
         private void btnCreateAcc_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             // 1. Grab the text from the UI
             string newFullName = txtRegName.Text.Trim();
             string newEmail = txtRegEmail.Text.Trim();
@@ -193,6 +211,32 @@ namespace CyberBites
                 }
             }
             // The 'using' block automatically calls conn.Close() right here to free up the file!
+=======
+            FakeDatabase.FullName = txtRegName.Text.Trim();
+            FakeDatabase.Email = txtRegEmail.Text.Trim();
+            FakeDatabase.Username = txtRegUser.Text.Trim();
+            FakeDatabase.Password = txtRegPass.Text;
+
+            // Safety check: Make sure they didn't leave it blank
+            if (string.IsNullOrWhiteSpace(FakeDatabase.FullName) || string.IsNullOrWhiteSpace(FakeDatabase.Username))
+            {
+                MessageBox.Show("Please fill out all fields.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            MessageBox.Show("Account created successfully! Please log in with your new credentials.", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // Send them back to the Login screen
+            // Send them back to the Login panel
+            pnlSignUp.Visible = false;
+            pnlLogin.Visible = true;
+
+            // Optional: Clear the sign-up textboxes so they are empty for the next person
+            txtRegName.Clear();
+            txtRegEmail.Clear();
+            txtRegUser.Clear();
+            txtRegPass.Clear();
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
         }
 
         private void txtLoginPass_KeyDown(object sender, KeyEventArgs e)

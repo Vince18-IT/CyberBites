@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿namespace CyberBites
+=======
+﻿namespace Krypton_Test
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
 {
     partial class ChangePasswordModal
     {
@@ -28,7 +32,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChangePasswordModal));
+=======
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
             kryptonPanel1 = new Krypton.Toolkit.KryptonPanel();
             btnCancel = new Krypton.Toolkit.KryptonButton();
             kryptonCheckBox1 = new Krypton.Toolkit.KryptonCheckBox();
@@ -269,7 +276,10 @@
             ClientSize = new Size(465, 329);
             Controls.Add(kryptonPanel1);
             FormBorderStyle = FormBorderStyle.Fixed3D;
+<<<<<<< HEAD
             Icon = (Icon)resources.GetObject("$this.Icon");
+=======
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "ChangePasswordModal";

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿namespace CyberBites
+=======
+﻿namespace Krypton_Test
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
 {
     partial class AccountPage
     {
@@ -186,7 +190,10 @@
             lblAccManage.Size = new Size(300, 37);
             lblAccManage.TabIndex = 17;
             lblAccManage.Text = "Account Management";
+<<<<<<< HEAD
             lblAccManage.DoubleClick += lblAccManage_DoubleClick;
+=======
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
             // 
             // kryptonPanel1
             // 
@@ -226,7 +233,11 @@
             kryptonLinkLabel1.StateCommon.ShortText.Color1 = Color.FromArgb(0, 173, 181);
             kryptonLinkLabel1.StateCommon.ShortText.Color2 = Color.FromArgb(0, 173, 181);
             kryptonLinkLabel1.StateCommon.ShortText.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+<<<<<<< HEAD
             kryptonLinkLabel1.TabIndex = 5;
+=======
+            kryptonLinkLabel1.TabIndex = 30;
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
             kryptonLinkLabel1.Values.Text = "Change Password";
             kryptonLinkLabel1.LinkClicked += kryptonLinkLabel1_LinkClicked;
             // 
@@ -237,7 +248,10 @@
             txtPassword.Multiline = true;
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
+<<<<<<< HEAD
             txtPassword.ReadOnly = true;
+=======
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
             txtPassword.Size = new Size(271, 41);
             txtPassword.StateCommon.Back.Color1 = Color.FromArgb(50, 50, 60);
             txtPassword.StateCommon.Border.Color1 = Color.FromArgb(0, 173, 181);
@@ -246,9 +260,14 @@
             txtPassword.StateCommon.Border.Width = 2;
             txtPassword.StateCommon.Content.Color1 = Color.White;
             txtPassword.StateCommon.Content.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
+<<<<<<< HEAD
             txtPassword.StateCommon.Content.Padding = new Padding(1);
             txtPassword.StateCommon.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
             txtPassword.TabIndex = 4;
+=======
+            txtPassword.StateCommon.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            txtPassword.TabIndex = 29;
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
             // 
             // txtSeatno
             // 
@@ -265,9 +284,14 @@
             txtSeatno.StateCommon.Border.Width = 2;
             txtSeatno.StateCommon.Content.Color1 = Color.White;
             txtSeatno.StateCommon.Content.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
+<<<<<<< HEAD
             txtSeatno.StateCommon.Content.Padding = new Padding(1);
             txtSeatno.StateCommon.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
             txtSeatno.TabIndex = 3;
+=======
+            txtSeatno.StateCommon.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            txtSeatno.TabIndex = 28;
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
             txtSeatno.DoubleClick += txtSeatno_DoubleClick;
             // 
             // txtUsername
@@ -284,9 +308,14 @@
             txtUsername.StateCommon.Border.Width = 2;
             txtUsername.StateCommon.Content.Color1 = Color.White;
             txtUsername.StateCommon.Content.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
+<<<<<<< HEAD
             txtUsername.StateCommon.Content.Padding = new Padding(1);
             txtUsername.StateCommon.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
             txtUsername.TabIndex = 2;
+=======
+            txtUsername.StateCommon.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            txtUsername.TabIndex = 27;
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
             // 
             // txtEmail
             // 
@@ -302,9 +331,14 @@
             txtEmail.StateCommon.Border.Width = 2;
             txtEmail.StateCommon.Content.Color1 = Color.White;
             txtEmail.StateCommon.Content.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
+<<<<<<< HEAD
             txtEmail.StateCommon.Content.Padding = new Padding(1);
             txtEmail.StateCommon.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
             txtEmail.TabIndex = 1;
+=======
+            txtEmail.StateCommon.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            txtEmail.TabIndex = 26;
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
             // 
             // txtName
             // 
@@ -320,9 +354,14 @@
             txtName.StateCommon.Border.Width = 2;
             txtName.StateCommon.Content.Color1 = Color.White;
             txtName.StateCommon.Content.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
+<<<<<<< HEAD
             txtName.StateCommon.Content.Padding = new Padding(1);
             txtName.StateCommon.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
             txtName.TabIndex = 0;
+=======
+            txtName.StateCommon.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            txtName.TabIndex = 25;
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
             // 
             // btnSaveChanges
             // 
@@ -345,7 +384,11 @@
             btnSaveChanges.StatePressed.Back.Color2 = Color.FromArgb(0, 173, 181);
             btnSaveChanges.StateTracking.Back.Color1 = Color.FromArgb(0, 173, 181);
             btnSaveChanges.StateTracking.Back.Color2 = Color.FromArgb(0, 173, 181);
+<<<<<<< HEAD
             btnSaveChanges.TabIndex = 6;
+=======
+            btnSaveChanges.TabIndex = 20;
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
             btnSaveChanges.Values.DropDownArrowColor = Color.Empty;
             btnSaveChanges.Values.Text = "SAVE CHANGES";
             btnSaveChanges.Click += btnSaveChanges_Click;

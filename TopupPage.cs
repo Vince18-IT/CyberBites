@@ -7,7 +7,11 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
+<<<<<<< HEAD
 namespace CyberBites
+=======
+namespace Krypton_Test
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
 {
     public partial class TopupPage : UserControl
     {
@@ -146,12 +150,15 @@ namespace CyberBites
             }
         }
 
+<<<<<<< HEAD
         public void UpdateAccountNameDisplay(string fullName)
         {
             // Change 'lblAccountName' to whatever you actually named the label under the ₱970.00!
             lblAccountName.Text = fullName;
         }
 
+=======
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
         private void btnConfirmTopUp_Click(object sender, EventArgs e)
         {
             if (currentFoodAmount > 0 || currentPCAmount > 0)

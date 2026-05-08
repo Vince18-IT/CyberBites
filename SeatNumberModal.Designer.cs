@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿namespace CyberBites
+=======
+﻿namespace Krypton_Test
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
 {
     partial class SeatNumberModal
     {
@@ -28,7 +32,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SeatNumberModal));
+=======
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
             kryptonPanel1 = new Krypton.Toolkit.KryptonPanel();
             btnSaveSeatno = new Krypton.Toolkit.KryptonButton();
             txtSeatInput = new Krypton.Toolkit.KryptonTextBox();
@@ -162,9 +169,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(469, 333);
             Controls.Add(kryptonPanel1);
+<<<<<<< HEAD
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "SeatNumberModal";
             Text = "Seat Number";
+=======
+            Name = "SeatNumberModal";
+            Text = "SeatNumberModal";
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
             ((System.ComponentModel.ISupportInitialize)kryptonPanel1).EndInit();
             kryptonPanel1.ResumeLayout(false);
             kryptonPanel1.PerformLayout();

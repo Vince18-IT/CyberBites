@@ -1,5 +1,8 @@
 ﻿using System;
+<<<<<<< HEAD
 using System.Data.SQLite;
+=======
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +12,7 @@ using System.Windows.Forms;
 using Krypton.Toolkit;
 
 
+<<<<<<< HEAD
 namespace CyberBites
 {
 
@@ -28,6 +32,15 @@ namespace CyberBites
 
             // Pre-fill the box with their last seat so they can just hit 'Save' if they didn't move PCs!
             txtSeatInput.Text = lastKnownSeat;
+=======
+namespace Krypton_Test
+{
+    public partial class SeatNumberModal : KryptonForm
+    {
+        public SeatNumberModal()
+        {
+            InitializeComponent();
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
         }
 
         private void btnSaveSeatno_Click(object sender, EventArgs e)
@@ -40,6 +53,7 @@ namespace CyberBites
                 return;
             }
 
+<<<<<<< HEAD
             // 1. Save it directly to the Database!
             using (SQLiteConnection conn = new SQLiteConnection(DatabaseHelper.ConnectionString))
             {
@@ -66,6 +80,12 @@ namespace CyberBites
             SelectedSeat = chosenSeat;
 
             // 3. Tell Windows this was a success and close the modal
+=======
+            // 2. Save it globally
+            FakeDatabase.SeatNumber = chosenSeat;
+
+            // 3. Tell Windows this modal was successful, then close it
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
             this.DialogResult = DialogResult.OK;
             this.Close();
         }

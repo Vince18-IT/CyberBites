@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿namespace CyberBites
+=======
+﻿namespace Krypton_Test
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
 {
     partial class MainForm
     {
@@ -303,7 +307,10 @@
             Controls.Add(panel1);
             Controls.Add(pnlMainContent);
             Controls.Add(flwSidebar);
+<<<<<<< HEAD
             Icon = (Icon)resources.GetObject("$this.Icon");
+=======
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
             Margin = new Padding(3, 2, 3, 2);
             Name = "MainForm";
             PaletteMode = Krypton.Toolkit.PaletteMode.Office2010BlackDarkMode;

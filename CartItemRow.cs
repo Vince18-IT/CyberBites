@@ -7,7 +7,11 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Windows.Forms;
 
+<<<<<<< HEAD
 namespace CyberBites
+=======
+namespace Krypton_Test
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
 {
     public partial class CartItemRow : UserControl
     {

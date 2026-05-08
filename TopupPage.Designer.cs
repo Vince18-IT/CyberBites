@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿namespace CyberBites
+=======
+﻿namespace Krypton_Test
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
 {
     partial class TopupPage
     {
@@ -31,7 +35,11 @@
             lblBalance = new Label();
             lblItemName = new Label();
             pnlWallet = new Krypton.Toolkit.KryptonPanel();
+<<<<<<< HEAD
             lblAccountName = new Label();
+=======
+            lblProfilename = new Label();
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
             label16 = new Label();
             lblCurrentBalance = new Label();
             label1 = new Label();
@@ -124,7 +132,11 @@
             // 
             // pnlWallet
             // 
+<<<<<<< HEAD
             pnlWallet.Controls.Add(lblAccountName);
+=======
+            pnlWallet.Controls.Add(lblProfilename);
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
             pnlWallet.Controls.Add(label16);
             pnlWallet.Controls.Add(lblCurrentBalance);
             pnlWallet.Controls.Add(label1);
@@ -138,6 +150,7 @@
             pnlWallet.StateCommon.Color2 = Color.FromArgb(40, 40, 50);
             pnlWallet.TabIndex = 15;
             // 
+<<<<<<< HEAD
             // lblAccountName
             // 
             lblAccountName.BackColor = Color.Transparent;
@@ -149,6 +162,19 @@
             lblAccountName.TabIndex = 17;
             lblAccountName.Text = "AccountName";
             lblAccountName.TextAlign = ContentAlignment.MiddleRight;
+=======
+            // lblProfilename
+            // 
+            lblProfilename.AutoSize = true;
+            lblProfilename.BackColor = Color.Transparent;
+            lblProfilename.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblProfilename.ForeColor = Color.White;
+            lblProfilename.Location = new Point(59, 136);
+            lblProfilename.Name = "lblProfilename";
+            lblProfilename.Size = new Size(136, 28);
+            lblProfilename.TabIndex = 17;
+            lblProfilename.Text = "AccountName";
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
             // 
             // label16
             // 
@@ -165,6 +191,7 @@
             // 
             // lblCurrentBalance
             // 
+<<<<<<< HEAD
             lblCurrentBalance.Anchor = AnchorStyles.Top;
             lblCurrentBalance.BackColor = Color.Transparent;
             lblCurrentBalance.Font = new Font("Segoe UI", 26F, FontStyle.Bold);
@@ -175,6 +202,18 @@
             lblCurrentBalance.TabIndex = 15;
             lblCurrentBalance.Text = "₱0.00";
             lblCurrentBalance.TextAlign = ContentAlignment.MiddleCenter;
+=======
+            lblCurrentBalance.Anchor = AnchorStyles.Left;
+            lblCurrentBalance.AutoSize = true;
+            lblCurrentBalance.BackColor = Color.Transparent;
+            lblCurrentBalance.Font = new Font("Segoe UI", 26F, FontStyle.Bold);
+            lblCurrentBalance.ForeColor = Color.White;
+            lblCurrentBalance.Location = new Point(67, 58);
+            lblCurrentBalance.Name = "lblCurrentBalance";
+            lblCurrentBalance.Size = new Size(111, 47);
+            lblCurrentBalance.TabIndex = 15;
+            lblCurrentBalance.Text = "₱0.00";
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
             // 
             // label1
             // 
@@ -505,7 +544,10 @@
             txtCustomFood.StateCommon.Border.Width = 2;
             txtCustomFood.StateCommon.Content.Color1 = Color.White;
             txtCustomFood.StateCommon.Content.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
+<<<<<<< HEAD
             txtCustomFood.StateCommon.Content.Padding = new Padding(5);
+=======
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
             txtCustomFood.StateCommon.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
             txtCustomFood.TabIndex = 24;
             txtCustomFood.TextChanged += txtCustomFood_TextChanged;
@@ -757,7 +799,10 @@
             txtCustomPC.StateCommon.Border.Width = 2;
             txtCustomPC.StateCommon.Content.Color1 = Color.White;
             txtCustomPC.StateCommon.Content.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
+<<<<<<< HEAD
             txtCustomPC.StateCommon.Content.Padding = new Padding(5);
+=======
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
             txtCustomPC.StateCommon.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
             txtCustomPC.TabIndex = 25;
             txtCustomPC.TextChanged += txtCustomPC_TextChanged;
@@ -969,7 +1014,11 @@
         private Label label14;
         private Label label15;
         private Krypton.Toolkit.KryptonButton btnConfirmTopUp;
+<<<<<<< HEAD
         private Label lblAccountName;
+=======
+        private Label lblProfilename;
+>>>>>>> ed5880bb680c0ac93c3e3758ea4eda431d084b6a
         private Label label16;
         private Label label17;
         private Label label19;
